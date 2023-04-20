@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correct a bug -- JavaScript Assignment</title>
+</head>
+
+<body>
+
+    <script>
+        function FixCart(Cart) {
+            for (let i = 0; i < Cart.length; i++) {
+                Cart[i] *= 2
+            }
+            return Cart
+        }
+        
+        let Cart = [4, 9, 7, 8];
+        Cart = FixCart(Cart);
+        console.log(Cart);
+
+    </script>
+</body>
+
+</html>

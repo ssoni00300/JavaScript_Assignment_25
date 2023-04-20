@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Adding List Items to an Ordered List -- JavaScript Assignment</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 97vh;
+            width: 100%;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        ul li {
+            font-size: 25px;
+            list-style: none;
+            color: white;
+            font-weight: 400;
+            padding: 8px 0;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: white;
+            color: black;
+            border-radius: 4px;
+            font-weight: 400;
+            font-family: sans-serif;
+            cursor: pointer;
+            letter-spacing: 3px;
+        }
+
+        .btn:hover {
+            background-color: rgba(207, 245, 142, 0.918);
+            border-radius: 4px solid rgba(0, 0, 0, 0.918);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <ul id="ul"></ul>
+            <button class="btn" id="btn">Add Item</button>
+        </div>
+    </div>
+
+    <script>
+        let ParentElement = document.getElementById("ul");
+        let AddButton = document.getElementById("btn");
+        
+        const ListOfItems = ["Item 1", "Item 2", "Item 3", "Item 4"];
+        let i = 0;
+
+
+        function AddElement(item) {
+            const listItem = document.createElement("li");
+
+            if(i < ListOfItems.length ){
+                listItem.innerText = ListOfItems[i];
+                i++;
+                ParentElement.appendChild(listItem);
+            }
+            else{
+                alert("Full Element");
+            }
+        }
+
+        AddButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            AddElement(ListOfItems);
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Highlighting -- JavaScript Assignment</title>
+
+    <style>
+        body {
+            background-color: #f5bbda;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 60%;
+            padding: 20px 20px;
+            border: 2px solid yellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #8CE6E4;
+            color: black;
+            margin-top: 100px;
+        }
+
+        .box p {
+            font-size: 20px;
+            font-weight: 400;
+            font-family: sans-serif;
+            padding: 10px;
+            word-spacing: 7px;
+            line-height: 2;
+            text-align:justify;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa nesciunt suscipit eos aspernatur ex mollitia, inventore neque debitis, numquam illum nostrum quis delectus fugiat eum sapiente ipsa perferendis vitae amet doloribus quasi non quidem harum nisi! Qui veniam assumenda recusandae ducimus praesentium veritatis quidem porro illum debitis soluta ipsum accusantium eaque suscipit quam at in voluptate itaque dicta, dolores nihil vel animi, repellat culpa doloribus! Amet aspernatur sapiente repellat adipisci culpa consequuntur, alias, soluta ad, obcaecati eum numquam autem facere quas vel eligendi nemo. Similique, perferendis ex necessitatibus repudiandae consequuntur eaque dolores saepe ipsam distinctio error unde magnam nesciunt!</p>
+        </div>
+        <div>
+            <button class="btn">Highlight</button>
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector(".btn")
+        let Text = document.querySelector(".box p")
+
+        let Words = Text.textContent.split(" ")
+
+        for (let i = 0; i < Words.length; i++) {
+            if (Words[i].length > 8) {
+                    Words[i] = "<span style='background : yellow '>" + Words[i] + "</span>"
+                }
+            }
+
+        button.addEventListener("click", () => {
+            Text.innerHTML = Words.join(" ")
+        })
+
+    </script>
+</body>
+
+</html>

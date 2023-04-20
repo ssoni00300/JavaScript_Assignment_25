@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rental calculator -- JavaScript</title>
+</head>
+
+<body>
+    <script>
+        function CarRentalCost(CarType, NoOfDays) {
+            let RentalCost;
+            if (CarType == "Economy") {
+                RentalCost = 4000
+            }
+
+            else if (CarType == "Midsize") {
+                RentalCost = 10000
+            }
+
+            else if (CarType == "Luxury") {
+                RentalCost = 20000
+            }
+
+            else {
+                return `${CarType} type of car is not available`
+            }
+            return `Type of car is ${CarType} and its cost of ${NoOfDays} day is ${RentalCost * NoOfDays}`
+        }
+
+        const TotalCost = CarRentalCost("Luxury", 8)
+        console.log(TotalCost)
+    </script>
+</body>
+
+</html>

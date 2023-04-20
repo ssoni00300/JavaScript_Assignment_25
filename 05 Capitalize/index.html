@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Marks in JavaScript - Assignment</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 85vh;
+            width: 100%;
+        }
+
+        .form {
+            width: 900px;
+            height: 500px;
+            border-radius: 20px;
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form input {
+            width: 300px;
+            height: 26px;
+            padding: 10px 25px;
+            font-size: 17px;
+            color: black;
+            border: 2px solid;
+            border-radius: 25px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: green;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid #000;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        .btn:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" class="form">
+        <input type="name" id="name" placeholder="Enter your name">
+        <button class="btn">Submit</button>
+    </form>
+
+
+    <script>
+        const submitBtn = document.querySelector(".btn")
+        const UserName = document.getElementById("name")
+
+        submitBtn.addEventListener("click", (e) => {
+            e.preventDefault()
+
+            if (UserName.value != "") {
+                const FirstWord = UserName.value[0]
+                const FirstWordToUpCase = UserName.value[0].toUpperCase()
+                const AnalyzeFirstWord = FirstWord != FirstWordToUpCase
+
+                // Using Ternary operator
+                const FinalWord = AnalyzeFirstWord ? UserName.value[0].toUpperCase() + UserName.value.slice(1, ) : UserName.value
+
+                UserName.value = FinalWord
+                console.log("Your Name is: ",UserName.value)
+                UserName.value = ""
+
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 35%;
+    min-height: 100px;
+    position: absolute;
+    min-width: 300px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: 2px solid black;
+}
+
+
+.todo {
+    padding: 30px;
+    text-align: center;
+}
+
+.todo input {
+    padding: 12px;
+    font-size: 15px;
+    border: 2px solid #2222224b;
+    width: 300px;
+    position: relative;
+    margin: 0 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: black;
+    outline: none;
+}
+
+.todo .Add {
+    padding: 12px 25px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+
+.todos {
+    background-color: black;
+    padding: 30px 30px;
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.showTodo {
+    background-color: pink;
+    height: 50px;
+    padding: 5px 10px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+    border: 1px solid #939697;
+    margin-left: 50px;
+    cursor: pointer;
+
+}
+
+.showTodo span {
+    width: 70%;
+    padding: 10px 5px;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 500;
+
+}
+
+.showTodo button {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px solid black;
+    cursor: pointer;
+
+}

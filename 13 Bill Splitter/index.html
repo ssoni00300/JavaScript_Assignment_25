@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter -- JavaScript Assignment</title>
+</head>
+
+<body>
+    <script>
+        function SplitBill(DishCosts, NumOfPeople){
+            let TotalCost = 0;
+            for(let i = 0; i < DishCosts.length; i++){
+                TotalCost += DishCosts[i];
+            }
+
+            let CostPerPerson = TotalCost / NumOfPeople
+
+            for(let i = 0; i < DishCosts.length; i++){
+                Cost = DishCosts[i];
+                Split = DishCosts[i] / NumOfPeople;
+                console.log(` ${Cost} Rupees split in ${NumOfPeople} people Money is ${Split}`);
+            }
+            return {TotalCost, CostPerPerson}
+        }
+        const DishCosts = [220, 280, 200, 180, 300];
+        const NumOfPeople = 8
+        const ans = SplitBill(DishCosts, NumOfPeople)
+        console.log(ans)
+    </script>
+</body>
+
+</html>

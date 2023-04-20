@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the vowel in Name--JavaScript Assignment</title>
+
+</head>
+
+<body>
+
+    <script>
+        const FindVowel=(name)=>{
+            const Vowel = ["a", "e", "i", "o", "u"]
+            let no = 0
+            for(i of name){
+                for(j of Vowel){
+                    if(i === j){
+                        no += 1
+                    }
+                }
+            }
+            return no
+        }
+        const name = "shubham"
+        const ans = FindVowel(name.toLowerCase())
+        console.log(ans)
+    </script>
+</body>
+
+</html>

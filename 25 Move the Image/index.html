@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move the Image -- JavaScript Assignment</title>
+    <style>
+        body {
+            background-color: #491616;
+        }
+
+        .box {
+            position: relative;
+            margin-top: 310px;
+            margin-left: 720px;
+        }
+
+        #img {
+            width: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img id="img" src="./pic.png" alt="">
+    </div>
+
+    <script>
+
+        const img = document.getElementById("img");
+        let X = 0;
+        let Y = 0;
+
+        document.addEventListener("keydown", function (event) {
+            if (event.keyCode === 37) { 
+                X -= 20;
+            } else if (event.keyCode === 38) {
+                Y -= 20;
+            } else if (event.keyCode === 39) {
+                X += 20;
+            } else if (event.keyCode === 40) {
+                Y += 20;
+            }
+
+            img.style.top = Y + "px";
+            img.style.left = X + "px";
+        });
+
+    </script>
+</body>
+
+</html>
